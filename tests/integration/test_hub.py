@@ -2,7 +2,7 @@
 
 import pytest
 
-from hf_decider import AutoCandidateScorer, AutoDecider, Binary, Choice
+from any_jev import AutoCandidateScorer, AutoDecider, Binary, Choice
 
 
 @pytest.mark.integration

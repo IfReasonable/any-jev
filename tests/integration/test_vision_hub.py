@@ -3,7 +3,7 @@
 import pytest
 from PIL import Image
 
-from hf_decider import AutoDecider, AutoVisionCandidateScorer, Choice
+from any_jev import AutoDecider, AutoVisionCandidateScorer, Choice
 
 
 @pytest.mark.integration

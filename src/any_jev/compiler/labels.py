@@ -1,6 +1,6 @@
 """Select label continuations with stable token boundaries."""
 
-from hf_decider.errors import CandidateBoundaryError
+from any_jev.errors import CandidateBoundaryError
 
 
 def label_candidates(tokenizer: object, prompt: str, count: int) -> tuple[str, ...]:

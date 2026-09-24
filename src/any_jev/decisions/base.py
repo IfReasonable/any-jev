@@ -1,6 +1,6 @@
 """Shared decision result conversion."""
 
-from hf_decider.scoring.outputs import CandidateScores
+from any_jev.scoring.outputs import CandidateScores
 
 
 def option_scores(

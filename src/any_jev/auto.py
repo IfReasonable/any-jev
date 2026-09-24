@@ -9,11 +9,11 @@ from transformers import (
     AutoTokenizer,
 )
 
-from hf_decider.decisions.binary import Binary, BinaryResult
-from hf_decider.decisions.choice import Choice, ChoiceResult
-from hf_decider.errors import UnsupportedModelError
-from hf_decider.scoring.text import TextCandidateScorer
-from hf_decider.scoring.vision import VisionCandidateScorer
+from any_jev.decisions.binary import Binary, BinaryResult
+from any_jev.decisions.choice import Choice, ChoiceResult
+from any_jev.errors import UnsupportedModelError
+from any_jev.scoring.text import TextCandidateScorer
+from any_jev.scoring.vision import VisionCandidateScorer
 
 
 class AutoCandidateScorer(TextCandidateScorer):

@@ -2,6 +2,7 @@
 
 ## 0.2.0 (release candidate)
 
+- Rename the distribution to `any-jev` and the Python import package to `any_jev`.
 - Score assistant text continuations conditioned on images and chat history through `AutoVisionCandidateScorer`.
 - Use VLMs for Choice and Binary decisions with `AutoDecider.from_pretrained(..., vision=True)` and `decide(..., images=[...])`.
 - Add a `vision` extra for Pillow and a tiny LLaVA integration test.

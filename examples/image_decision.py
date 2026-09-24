@@ -2,7 +2,7 @@
 
 import sys
 
-from hf_decider import AutoDecider, AutoVisionCandidateScorer, Choice
+from any_jev import AutoDecider, AutoVisionCandidateScorer, Choice
 
 if len(sys.argv) != 3:
     raise SystemExit("usage: python examples/image_decision.py MODEL_ID IMAGE_PATH")

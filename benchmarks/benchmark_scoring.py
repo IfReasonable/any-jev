@@ -11,7 +11,7 @@ import torch
 import transformers
 from transformers import AutoModelForCausalLM, GPT2Config
 
-from hf_decider.scoring.reference import ReferenceCandidateScorer
+from any_jev.scoring.reference import ReferenceCandidateScorer
 
 
 def main() -> None:

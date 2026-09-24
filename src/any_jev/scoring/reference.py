@@ -4,8 +4,8 @@ from collections.abc import Sequence
 
 import torch
 
-from hf_decider.errors import UnsupportedModelError
-from hf_decider.scoring.outputs import CandidateScores
+from any_jev.errors import UnsupportedModelError
+from any_jev.scoring.outputs import CandidateScores
 
 
 class ReferenceCandidateScorer:

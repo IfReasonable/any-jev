@@ -1,7 +1,7 @@
 import pytest
 
-from hf_decider import AutoDecider, Binary, Choice
-from hf_decider.scoring.text import TextCandidateScorer
+from any_jev import AutoDecider, Binary, Choice
+from any_jev.scoring.text import TextCandidateScorer
 from tests.scoring.test_reference import PredictableLM
 
 

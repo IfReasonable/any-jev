@@ -3,8 +3,8 @@ from types import SimpleNamespace
 import pytest
 import torch
 
-from hf_decider import CandidateScores, UnsupportedModelError
-from hf_decider.scoring.reference import ReferenceCandidateScorer
+from any_jev import CandidateScores, UnsupportedModelError
+from any_jev.scoring.reference import ReferenceCandidateScorer
 
 
 class PredictableLM(torch.nn.Module):

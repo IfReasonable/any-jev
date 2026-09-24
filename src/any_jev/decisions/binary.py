@@ -3,9 +3,9 @@
 from collections.abc import Sequence
 from dataclasses import dataclass
 
-from hf_decider.decisions.choice import Choice, ChoiceResult
-from hf_decider.scoring.text import TextCandidateScorer
-from hf_decider.scoring.vision import VisionCandidateScorer
+from any_jev.decisions.choice import Choice, ChoiceResult
+from any_jev.scoring.text import TextCandidateScorer
+from any_jev.scoring.vision import VisionCandidateScorer
 
 
 @dataclass(frozen=True)

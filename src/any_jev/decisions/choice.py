@@ -3,12 +3,12 @@
 from collections.abc import Sequence
 from dataclasses import dataclass
 
-from hf_decider.compiler.labels import label_candidates
-from hf_decider.compiler.prompt import choice_prompt
-from hf_decider.decisions.base import option_scores
-from hf_decider.errors import CandidateBoundaryError
-from hf_decider.scoring.text import TextCandidateScorer
-from hf_decider.scoring.vision import VisionCandidateScorer
+from any_jev.compiler.labels import label_candidates
+from any_jev.compiler.prompt import choice_prompt
+from any_jev.decisions.base import option_scores
+from any_jev.errors import CandidateBoundaryError
+from any_jev.scoring.text import TextCandidateScorer
+from any_jev.scoring.vision import VisionCandidateScorer
 
 
 @dataclass(frozen=True)

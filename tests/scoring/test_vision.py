@@ -5,8 +5,8 @@ from types import SimpleNamespace
 import pytest
 import torch
 
-from hf_decider import AutoDecider, Binary, CandidateBoundaryError, Choice
-from hf_decider.scoring.vision import VisionCandidateScorer
+from any_jev import AutoDecider, Binary, CandidateBoundaryError, Choice
+from any_jev.scoring.vision import VisionCandidateScorer
 
 
 class FakeVisionProcessor:

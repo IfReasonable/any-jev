@@ -2,7 +2,7 @@
 
 import sys
 
-from hf_decider import AutoDecider, Choice
+from any_jev import AutoDecider, Choice
 
 model_id = sys.argv[1] if len(sys.argv) > 1 else "hf-internal-testing/tiny-random-gpt2"
 decider = AutoDecider.from_pretrained(model_id)

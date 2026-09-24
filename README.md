@@ -1,13 +1,13 @@
-# HF-Decider
+# any-jev
 
 Turn a compatible Hugging Face LLM or VLM into a candidate scorer / probabilistic decider without generating text.
 
-Install with `pip install hf-decider` for LLMs or `pip install 'hf-decider[vision]'` for image support. For development, run `pip install -e '.[dev,vision]'` in the `jev` environment.
+Install with `pip install any-jev` for LLMs or `pip install 'any-jev[vision]'` for image support. For development, run `pip install -e '.[dev,vision]'` in the `jev` environment.
 
 ## Candidate scoring
 
 ```python
-from hf_decider import AutoCandidateScorer
+from any_jev import AutoCandidateScorer
 
 scorer = AutoCandidateScorer.from_pretrained("Qwen/Qwen3-4B")
 scores = scorer.score_text(
@@ -23,7 +23,7 @@ Scores are sums of token log probabilities, with no length normalization. The fi
 ## Choice
 
 ```python
-from hf_decider import AutoDecider, Choice
+from any_jev import AutoDecider, Choice
 
 decider = AutoDecider.from_pretrained("Qwen/Qwen3-4B")
 result = decider.decide(
@@ -36,7 +36,7 @@ print(result["route"].choice, result["route"].probabilities)
 ## Binary
 
 ```python
-from hf_decider import AutoDecider, Binary
+from any_jev import AutoDecider, Binary
 
 decider = AutoDecider.from_pretrained("Qwen/Qwen3-4B")
 result = decider.decide(
@@ -50,7 +50,7 @@ print(result["refund"].probability_true)
 
 ```python
 from PIL import Image
-from hf_decider import AutoVisionCandidateScorer, AutoDecider, Choice
+from any_jev import AutoVisionCandidateScorer, AutoDecider, Choice
 
 model_id = "Qwen/Qwen2.5-VL-3B-Instruct"
 image = Image.open("example.jpg").convert("RGB")

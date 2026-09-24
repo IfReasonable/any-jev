@@ -4,8 +4,8 @@ from collections.abc import Mapping, Sequence
 
 import torch
 
-from hf_decider.errors import CandidateBoundaryError, UnsupportedModelError
-from hf_decider.scoring.outputs import CandidateScores
+from any_jev.errors import CandidateBoundaryError, UnsupportedModelError
+from any_jev.scoring.outputs import CandidateScores
 
 
 class VisionCandidateScorer:

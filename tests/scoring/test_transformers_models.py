@@ -4,7 +4,7 @@ import pytest
 import torch
 from transformers import AutoModelForCausalLM, GPT2Config, LlamaConfig
 
-from hf_decider.scoring.reference import ReferenceCandidateScorer
+from any_jev.scoring.reference import ReferenceCandidateScorer
 
 
 @pytest.mark.parametrize(

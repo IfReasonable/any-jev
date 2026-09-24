@@ -1,7 +1,7 @@
 import pytest
 
-from hf_decider import CandidateBoundaryError
-from hf_decider.scoring.text import TextCandidateScorer
+from any_jev import CandidateBoundaryError
+from any_jev.scoring.text import TextCandidateScorer
 from tests.scoring.test_reference import PredictableLM
 
 

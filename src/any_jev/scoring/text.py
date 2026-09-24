@@ -4,9 +4,9 @@ from collections.abc import Sequence
 
 import torch
 
-from hf_decider.errors import CandidateBoundaryError
-from hf_decider.scoring.outputs import CandidateScores
-from hf_decider.scoring.reference import ReferenceCandidateScorer
+from any_jev.errors import CandidateBoundaryError
+from any_jev.scoring.outputs import CandidateScores
+from any_jev.scoring.reference import ReferenceCandidateScorer
 
 
 class TextCandidateScorer(ReferenceCandidateScorer):

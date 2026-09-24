@@ -1,6 +1,6 @@
 # Contributing
 
-Use Python 3.10+ and `pip install -e '.[dev]'`. Run:
+Use Python 3.10+ and `pip install -e '.[dev,vision]'`. Run:
 
 ```sh
 ruff check .

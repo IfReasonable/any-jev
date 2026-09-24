@@ -6,7 +6,9 @@ from dataclasses import dataclass
 from hf_decider.compiler.labels import label_candidates
 from hf_decider.compiler.prompt import choice_prompt
 from hf_decider.decisions.base import option_scores
+from hf_decider.errors import CandidateBoundaryError
 from hf_decider.scoring.text import TextCandidateScorer
+from hf_decider.scoring.vision import VisionCandidateScorer
 
 
 @dataclass(frozen=True)
@@ -43,3 +45,18 @@ class Choice:
         scores = scorer.score_text(prompt, labels)
         logprobs, probabilities, index = option_scores(scores, self.options)
         return ChoiceResult(self.options[index], index, logprobs, probabilities)
+
+    def decide_vision(
+        self, state: str, images: Sequence[object], scorer: VisionCandidateScorer
+    ) -> ChoiceResult:
+        """Score labels as VLM assistant continuations conditioned on images."""
+        prompt = choice_prompt(state, self.instruction, self.options)
+        for separator in (" ", "\n", "\n "):
+            labels = tuple(separator + chr(65 + index) for index in range(len(self.options)))
+            try:
+                scores = scorer.score_image_text(prompt, images, labels)
+            except CandidateBoundaryError:
+                continue
+            logprobs, probabilities, index = option_scores(scores, self.options)
+            return ChoiceResult(self.options[index], index, logprobs, probabilities)
+        raise CandidateBoundaryError("No stable token boundary for VLM option labels")
